@@ -29,20 +29,24 @@ axios
 		console.log('there was an error', error); 
 	})
 
-	function Cards(article) {
-		const card = document.createElement('div'),
-		headline = document.createElement('div'),
-		author = document.createElement('div'),
-		imageContainer = document.createElement('div'),
-		imageAuthor = document.createElement('img'),
-		authorName = document.createElement('span');
+function Cards(article) {
+	const card = document.createElement('div'),
+	headline = document.createElement('div'),
+	author = document.createElement('div'),
+	imageContainer = document.createElement('div'),
+	imageAuthor = document.createElement('img'),
+	authorName = document.createElement('span');
 
-		card.appendChild(headline);
-		card.appendChild(author);
-		card.appendChild(authorName);
-		author.appendChild(imageContainer);
-		author.appendChild(imageAuthor);
-		
-
-		return card;
-	}
+	card.appendChild(headline);
+	card.appendChild(author);
+	card.appendChild(authorName);
+	author.appendChild(imageContainer);
+	author.appendChild(imageAuthor);
+	
+	card.classList.add('card');
+	headline.classList.add('headline');
+	author.classList.add('author');
+	imageContainer.classList.add('img-container'); 
+	
+	return card;
+}
