@@ -28,3 +28,14 @@ axios
 	.catch(error => {
 		console.log('there was an error', error); 
 	})
+
+	function Cards() {
+		const card = document.createElement('div'),
+		headline = document.createElement('div'),
+		author = document.createElement('div'),
+		imageContainer = document.createElement('div'),
+		imageAuthor = document.createElement('img'),
+		authorName = document.createElement('span'); 
+
+		return card;
+	}
