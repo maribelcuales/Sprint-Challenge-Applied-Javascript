@@ -15,3 +15,13 @@ function Tabs() {
 
 	return tab; 
 }
+
+axios
+	.get('https://lambda-times-backend.herokuapp.com/topics')
+	.then(response => {
+		console.log(response);
+		console.log(response.data.topics); 
+	})
+	.catch(error => {
+		console.log('there was an error', error); 
+	}) 
