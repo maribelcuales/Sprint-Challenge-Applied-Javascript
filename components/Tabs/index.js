@@ -7,3 +7,11 @@
 //
 //  Each tab should look like this:
 //    <div class="tab">topic here</div>
+
+function Tabs() {
+	const tab = document.createElement('div');
+	tab.classList.add('tab');
+	tab.textContent = 'topic here';
+
+	return tab; 
+}
