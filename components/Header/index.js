@@ -17,5 +17,9 @@ function Header() {
 	title = document.createElement('h1'),
 	temp = document.createElement('span'); 
 
+	header.appendChild(date);
+	header.appendChild(title);
+	header.appendChild(temp);
+
 	return header; 
 }
