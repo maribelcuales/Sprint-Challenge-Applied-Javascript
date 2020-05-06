@@ -37,6 +37,10 @@ axios
 		articles.jquery.forEach(item => {
 			cardsContainer.appendChild(Cards(item));
 		})
+
+		articles.node.forEach(item => {
+			cardsContainer.appendChild(Cards(item));
+		})
 	})
 	.catch(error => {
 		console.log('there was an error', error); 
