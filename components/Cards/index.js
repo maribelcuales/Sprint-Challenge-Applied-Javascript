@@ -23,7 +23,7 @@ axios
 	.get('https://lambda-times-backend.herokuapp.com/articles')
 	.then(response => {
 		console.log(response);
-		console.log(response.data.articles); 
+		// console.log(response.data.articles); 
 
 		const articles = response.data.articles;
 		articles.bootstrap.forEach(item => {
@@ -77,4 +77,3 @@ function Cards(object) {
 }
 
 const cardsContainer = document.querySelector('.cards-container');
-const pickCard = document.querySelector('.card'); 
