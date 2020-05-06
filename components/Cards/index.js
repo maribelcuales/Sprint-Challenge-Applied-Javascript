@@ -24,6 +24,11 @@ axios
 	.then(response => {
 		console.log(response);
 		console.log(response.data.articles); 
+
+		const articles = response.data.articles;
+		articles.bootstrap.forEach(item => {
+			cardsContainer.appendChild(Cards(item));
+		})
 	})
 	.catch(error => {
 		console.log('there was an error', error); 
