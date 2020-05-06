@@ -29,8 +29,12 @@ axios
 		articles.bootstrap.forEach(item => {
 			cardsContainer.appendChild(Cards(item));
 		})
-		
+
 		articles.javascript.forEach(item => {
+			cardsContainer.appendChild(Cards(item));
+		})
+
+		articles.jquery.forEach(item => {
 			cardsContainer.appendChild(Cards(item));
 		})
 	})
