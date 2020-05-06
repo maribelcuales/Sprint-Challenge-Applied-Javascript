@@ -41,6 +41,10 @@ axios
 		articles.node.forEach(item => {
 			cardsContainer.appendChild(Cards(item));
 		})
+
+		articles.technology.forEach(item => {
+			cardsContainer.appendChild(Cards(item));
+		})
 	})
 	.catch(error => {
 		console.log('there was an error', error); 
