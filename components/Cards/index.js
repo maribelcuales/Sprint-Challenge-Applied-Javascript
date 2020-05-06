@@ -24,12 +24,14 @@ axios
 	.then(response => {
 		console.log(response);
 		console.log(response.data.articles); 
+		const articles = response.data.articles.bootstrap;
+		console.log(Object.entries(articles));
 	})
 	.catch(error => {
 		console.log('there was an error', error); 
 	})
 
-function Cards(article) {
+function Cards(object) {
 	const card = document.createElement('div'),
 	headline = document.createElement('div'),
 	author = document.createElement('div'),
@@ -46,7 +48,11 @@ function Cards(article) {
 	card.classList.add('card');
 	headline.classList.add('headline');
 	author.classList.add('author');
-	imageContainer.classList.add('img-container'); 
-	
+	imageContainer.classList.add('img-container');
+
+	headline.textContent = object.data.articles[i].headline; 
+	imageAuthor.src = object.data.articles[i].authorPhoto;
+	authorName.textContent = object.data.articles[i].authorName;
+
 	return card;
 }
