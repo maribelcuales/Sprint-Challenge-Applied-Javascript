@@ -26,6 +26,8 @@ axios
 		console.log(response.data.articles); 
 		const articles = response.data.articles.bootstrap;
 		console.log(Object.entries(articles));
+
+		cardsContainer.appendChild(Cards(response)); 
 	})
 	.catch(error => {
 		console.log('there was an error', error); 
@@ -50,9 +52,15 @@ function Cards(object) {
 	author.classList.add('author');
 	imageContainer.classList.add('img-container');
 
-	headline.textContent = object.data.articles[i].headline; 
-	imageAuthor.src = object.data.articles[i].authorPhoto;
-	authorName.textContent = object.data.articles[i].authorName;
+	headline.textContent = object.data.articles.bootstrap[0].headline;
+	imageAuthor.src = object.data.articles.bootstrap[0].authorPhoto;
+	authorName.textContent = object.data.articles.bootstrap[0].authorName;
+
+	// headline.textContent = object.data.articles[i].headline; 
+	// imageAuthor.src = object.data.articles[i].authorPhoto;
+	// authorName.textContent = object.data.articles[i].authorName;
 
 	return card;
 }
+
+const cardsContainer = document.querySelector('.cards-container');
